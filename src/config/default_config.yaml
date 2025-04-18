@@ -1,0 +1,25 @@
+model:
+  model_type: gpt-mini
+  vocab_size: 50257
+  block_size: 128
+  n_layer: 6
+  n_head: 6
+  n_embd: 192
+  embd_pdrop: 0.1
+  resid_pdrop: 0.1
+  attn_pdrop: 0.1
+
+training:
+  batch_size: 32
+  learning_rate: 3.0e-4
+  epochs: 1
+  grad_norm_clip: 1.0
+  checkpoint_dir: checkpoints
+  save_every: 1000
+  log_every: 100
+
+generation:
+  max_new_tokens: 50
+  temperature: 0.9
+  top_k: null
+  do_sample: true
